@@ -1,3 +1,8 @@
+require('dotenv').config()
+let appInsights = require('applicationinsights');
+appInsights.setup();
+appInsights.start();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
