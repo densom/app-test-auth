@@ -1,7 +1,6 @@
 require('dotenv').config()
 let appInsights = require('applicationinsights');
-appInsights.setup();
-appInsights.start();
+appInsights.setup().setDistributedTracingMode(appInsights.DistributedTracingModes.AI_AND_W3C).start();
 
 var createError = require('http-errors');
 var express = require('express');
